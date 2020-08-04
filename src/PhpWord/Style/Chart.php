@@ -79,8 +79,27 @@ class Chart extends AbstractStyle
         'showPercent'      => false,
         'showLeaderLines'  => false,
         'showBubbleSize'   => false,
-        'dLblPos'          => 'outEnd',
     );
+
+    /**
+     * ONLY PIE
+     * A string that allows you to determine the position of labels on the graphics
+     * "bestFit" - Best Fit
+     * "ctr"	- Center
+     * "inEnd"	- Inside End
+     * "outEnd"	- Outside End
+     *
+     * @var string
+     */
+    private $dataLabelPosition = 'outEnd';
+
+    /**
+     * ONLY PIE
+     * Display the separator in labels on the chart
+     *
+     * @var bool
+     */
+    private $showSeparatorsInLabel = false;
 
     /**
      * A string that tells the writer where to write chart labels or to skip
@@ -395,16 +414,16 @@ class Chart extends AbstractStyle
         return $this->valueLabelPosition;
     }
 
-    /**
-     * Set the valueLabelPosition setting
-     * "none" - skips writing labels
-     * "nextTo" - sets labels next to the value
-     * "low" - sets labels are below the graph
-     * "high" - sets labels above the graph
-     *
-     * @param string
-     * @param mixed $labelPosition
-     */
+  /**
+   * Set the valueLabelPosition setting
+   * "none" - skips writing labels
+   * "nextTo" - sets labels next to the value
+   * "low" - sets labels are below the graph
+   * "high" - sets labels above the graph
+   *
+   * @param mixed $labelPosition
+   * @return Chart
+   */
     public function setValueLabelPosition($labelPosition)
     {
         $enum = array('nextTo', 'low', 'high');
@@ -412,6 +431,59 @@ class Chart extends AbstractStyle
 
         return $this;
     }
+
+  /**
+   * ONLY PIE
+   * Get the data label position
+   *
+   * @return string
+   */
+  public function getDataLabelPosition()
+  {
+    return $this->dataLabelPosition;
+  }
+
+  /**
+   * ONLY PIE
+   * Set the data label position
+   * "bestFit" - Best Fit
+   * "ctr"	- Center
+   * "inEnd"	- Inside End
+   * "outEnd"	- Outside End
+   *
+   * @param mixed $datLabelPosition
+   * @return self
+   */
+  public function setDataLabelPosition($datLabelPosition)
+  {
+    $enum = array('bestFit', 'ctr', 'inEnd', 'outEnd');
+    $this->dataLabelPosition = $this->setEnumVal($datLabelPosition, $enum, $this->dataLabelPosition);
+
+    return $this;
+  }
+
+  /**
+   * ONLY PIE
+   *
+   * @return bool
+   */
+  public function showSeparatorsInLabel()
+  {
+    return $this->showSeparatorsInLabel;
+  }
+
+  /**
+   * ONLY PIE
+   *
+   * @param $show
+   * @return Chart
+   */
+  public function setShowSeparatorsInLabel($show)
+  {
+    $this->showSeparatorsInLabel = (bool) $show;
+
+    return $this;
+  }
 
     /**
      * Get the categoryAxisTitle

@@ -252,6 +252,13 @@ class Chart extends AbstractPart
                 $xmlWriter->writeElementBlock("c:{$option}", 'val', (int) $val);
             }
 
+            if ($this->element->getType() == 'pie') {
+              $xmlWriter->writeElementBlock("c:dLblPos", 'val', $style->getDataLabelPosition());
+              if (!$style->showSeparatorsInLabel()) {
+                $xmlWriter->writeElementBlock("c:separator", 'val', ' ');
+              }
+            }
+
             $xmlWriter->endElement(); // c:dLbls
 
             if (isset($this->options['scatter'])) {

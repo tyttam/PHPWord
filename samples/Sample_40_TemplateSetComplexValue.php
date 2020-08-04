@@ -1,14 +1,14 @@
 <?php
-use PhpOffice\PhpWord\Element\Field;
-use PhpOffice\PhpWord\Element\Table;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\SimpleType\TblWidth;
+use tyttam\PhpWord\Element\Field;
+use tyttam\PhpWord\Element\Table;
+use tyttam\PhpWord\Element\TextRun;
+use tyttam\PhpWord\SimpleType\TblWidth;
 
 include_once 'Sample_Header.php';
 
 // Template processor instance creation
 echo date('H:i:s'), ' Creating new TemplateProcessor instance...', EOL;
-$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor('resources/Sample_40_TemplateSetComplexValue.docx');
+$templateProcessor = new \tyttam\PhpWord\TemplateProcessor('resources/Sample_40_TemplateSetComplexValue.docx');
 
 $title = new TextRun();
 $title->addText('This title has been set ', array('bold' => true, 'italic' => true, 'color' => 'blue'));

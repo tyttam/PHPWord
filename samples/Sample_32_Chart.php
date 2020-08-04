@@ -1,11 +1,11 @@
 <?php
 include_once 'Sample_Header.php';
 
-use PhpOffice\PhpWord\Shared\Converter;
+use tyttam\PhpWord\Shared\Converter;
 
 // New Word document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \tyttam\PhpWord\PhpWord();
 
 // Define styles
 $phpWord->addTitleStyle(1, array('size' => 14, 'bold' => true), array('keepNext' => true, 'spaceBefore' => 240));
@@ -33,6 +33,9 @@ foreach ($chartTypes as $chartType) {
     $chart->getStyle()->setShowGridX($showGridLines);
     $chart->getStyle()->setShowGridY($showGridLines);
     $chart->getStyle()->setShowAxisLabels($showAxisLabels);
+    $chart->getStyle()->setDataLabelOptions(array('showPercent' => true, 'showVal' => false));
+    $chart->getStyle()->setDataLabelPosition('outEnd');
+    $chart->getStyle()->setShowSeparatorsInLabel(false);
     if (in_array($chartType, $twoSeries)) {
         $chart->addSeries($categories, $series2);
     }
