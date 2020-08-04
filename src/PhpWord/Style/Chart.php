@@ -79,6 +79,7 @@ class Chart extends AbstractStyle
         'showPercent'      => false,
         'showLeaderLines'  => false,
         'showBubbleSize'   => false,
+        'dLblPos'          => 'outEnd',
     );
 
     /**
