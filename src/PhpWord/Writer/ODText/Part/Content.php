@@ -15,22 +15,22 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace tyttam\PhpWord\Writer\ODText\Part;
 
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpWord\Element\AbstractContainer;
-use PhpOffice\PhpWord\Element\Image;
-use PhpOffice\PhpWord\Element\Table;
-use PhpOffice\PhpWord\Element\Text;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
-use PhpOffice\PhpWord\Style\Table as TableStyle;
-use PhpOffice\PhpWord\Writer\ODText\Element\Container;
-use PhpOffice\PhpWord\Writer\ODText\Style\Paragraph as ParagraphStyleWriter;
+use tyttam\PhpWord\Element\AbstractContainer;
+use tyttam\PhpWord\Element\Image;
+use tyttam\PhpWord\Element\Table;
+use tyttam\PhpWord\Element\Text;
+use tyttam\PhpWord\Element\TextRun;
+use tyttam\PhpWord\Element\TrackChange;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\Style;
+use tyttam\PhpWord\Style\Font;
+use tyttam\PhpWord\Style\Paragraph;
+use tyttam\PhpWord\Style\Table as TableStyle;
+use tyttam\PhpWord\Writer\ODText\Element\Container;
+use tyttam\PhpWord\Writer\ODText\Style\Paragraph as ParagraphStyleWriter;
 
 /**
  * ODText content part writer: content.xml
@@ -154,9 +154,9 @@ class Content extends AbstractPart
 
         $this->writeTextStyles($xmlWriter);
         foreach ($this->autoStyles as $element => $styles) {
-            $writerClass = 'PhpOffice\\PhpWord\\Writer\\ODText\\Style\\' . $element;
+            $writerClass = 'tyttam\\PhpWord\\Writer\\ODText\\Style\\' . $element;
             foreach ($styles as $style) {
-                /** @var \PhpOffice\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
+                /** @var \tyttam\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
                 $styleWriter = new $writerClass($xmlWriter, $style);
                 $styleWriter->write();
             }
@@ -179,7 +179,7 @@ class Content extends AbstractPart
                 if ($style->isAuto() === true) {
                     $styleClass = str_replace('\\Style\\', '\\Writer\\ODText\\Style\\', get_class($style));
                     if (class_exists($styleClass)) {
-                        /** @var \PhpOffice\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
+                        /** @var \tyttam\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
                         $styleWriter = new $styleClass($xmlWriter, $style);
                         $styleWriter->write();
                     }
@@ -201,7 +201,7 @@ class Content extends AbstractPart
     /**
      * Get automatic styles.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \tyttam\PhpWord\PhpWord $phpWord
      */
     private function getAutoStyles(PhpWord $phpWord)
     {
@@ -221,7 +221,7 @@ class Content extends AbstractPart
      *
      * Table style can be null or string of the style name
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer $container
+     * @param \tyttam\PhpWord\Element\AbstractContainer $container
      * @param int $paragraphStyleCount
      * @param int $fontStyleCount
      * @todo Simplify the logic
@@ -239,7 +239,7 @@ class Content extends AbstractPart
                 $style->setStyleName('fr' . $element->getMediaIndex());
                 $this->autoStyles['Image'][] = $style;
             } elseif ($element instanceof Table) {
-                /** @var \PhpOffice\PhpWord\Style\Table $style */
+                /** @var \tyttam\PhpWord\Style\Table $style */
                 $style = $element->getStyle();
                 if ($style === null) {
                     $style = new TableStyle();
@@ -256,7 +256,7 @@ class Content extends AbstractPart
     /**
      * Get style of individual element
      *
-     * @param \PhpOffice\PhpWord\Element\Text $element
+     * @param \tyttam\PhpWord\Element\Text $element
      * @param int $paragraphStyleCount
      * @param int $fontStyleCount
      */
@@ -285,7 +285,7 @@ class Content extends AbstractPart
      * Finds all tracked changes
      *
      * @param AbstractContainer $container
-     * @param \PhpOffice\PhpWord\Element\AbstractElement[] $trackedChanges
+     * @param \tyttam\PhpWord\Element\AbstractElement[] $trackedChanges
      */
     private function collectTrackedChanges(AbstractContainer $container, &$trackedChanges = array())
     {

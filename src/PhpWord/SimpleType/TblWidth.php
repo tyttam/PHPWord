@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\SimpleType;
+namespace tyttam\PhpWord\SimpleType;
 
-use PhpOffice\PhpWord\Shared\AbstractEnum;
+use tyttam\PhpWord\Shared\AbstractEnum;
 
 /**
  * Table Width Units

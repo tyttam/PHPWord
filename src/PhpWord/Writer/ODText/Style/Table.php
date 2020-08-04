@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace tyttam\PhpWord\Writer\ODText\Style;
 
 /**
  * Table style writer
@@ -29,9 +29,9 @@ class Table extends AbstractStyle
      */
     public function write()
     {
-        /** @var \PhpOffice\PhpWord\Style\Table $style Type hint */
+        /** @var \tyttam\PhpWord\Style\Table $style Type hint */
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Table) {
+        if (!$style instanceof \tyttam\PhpWord\Style\Table) {
             return;
         }
         $xmlWriter = $this->getXmlWriter();

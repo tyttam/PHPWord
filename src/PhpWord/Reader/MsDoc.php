@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader;
+namespace tyttam\PhpWord\Reader;
 
 use PhpOffice\Common\Drawing;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\OLERead;
-use PhpOffice\PhpWord\Style;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\Shared\OLERead;
+use tyttam\PhpWord\Style;
 
 /**
  * Reader for Word97

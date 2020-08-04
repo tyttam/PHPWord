@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
-use PhpOffice\PhpWord\Style;
+use tyttam\PhpWord\Style;
 
 /**
  * List item style

@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
 use PhpOffice\Common\Text as CommonText;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
+use tyttam\PhpWord\Style\Font;
+use tyttam\PhpWord\Style\Paragraph;
 
 /**
  * Link element
@@ -43,14 +43,14 @@ class Link extends AbstractElement
     /**
      * Font style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Font
+     * @var string|\tyttam\PhpWord\Style\Font
      */
     private $fontStyle;
 
     /**
      * Paragraph style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Paragraph
+     * @var string|\tyttam\PhpWord\Style\Paragraph
      */
     private $paragraphStyle;
 
@@ -109,7 +109,7 @@ class Link extends AbstractElement
     /**
      * Get Text style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @return string|\tyttam\PhpWord\Style\Font
      */
     public function getFontStyle()
     {
@@ -119,7 +119,7 @@ class Link extends AbstractElement
     /**
      * Get Paragraph style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Paragraph
+     * @return string|\tyttam\PhpWord\Style\Paragraph
      */
     public function getParagraphStyle()
     {

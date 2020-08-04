@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
 use PhpOffice\Common\Text as CommonText;
-use PhpOffice\PhpWord\Style;
+use tyttam\PhpWord\Style;
 
 /**
  * Title element

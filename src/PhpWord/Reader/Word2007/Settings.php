@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader\Word2007;
+namespace tyttam\PhpWord\Reader\Word2007;
 
 use PhpOffice\Common\XMLReader;
-use PhpOffice\PhpWord\ComplexType\TrackChangesView;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Style\Language;
+use tyttam\PhpWord\ComplexType\TrackChangesView;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\Style\Language;
 
 /**
  * Settings reader
@@ -45,7 +45,7 @@ class Settings extends AbstractPart
     /**
      * Read settings.xml.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \tyttam\PhpWord\PhpWord $phpWord
      */
     public function read(PhpWord $phpWord)
     {

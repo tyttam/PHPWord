@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 use PhpOffice\Common\Text;
-use PhpOffice\PhpWord\Exception\InvalidStyleException;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\SimpleType\TextAlignment;
+use tyttam\PhpWord\Exception\InvalidStyleException;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\SimpleType\TextAlignment;
 
 /**
  * Paragraph style
@@ -85,14 +85,14 @@ class Paragraph extends Border
     /**
      * Indentation
      *
-     * @var \PhpOffice\PhpWord\Style\Indentation
+     * @var \tyttam\PhpWord\Style\Indentation
      */
     private $indentation;
 
     /**
      * Spacing
      *
-     * @var \PhpOffice\PhpWord\Style\Spacing
+     * @var \tyttam\PhpWord\Style\Spacing
      */
     private $spacing;
 
@@ -148,14 +148,14 @@ class Paragraph extends Border
     /**
      * Set of Custom Tab Stops
      *
-     * @var \PhpOffice\PhpWord\Style\Tab[]
+     * @var \tyttam\PhpWord\Style\Tab[]
      */
     private $tabs = array();
 
     /**
      * Shading
      *
-     * @var \PhpOffice\PhpWord\Style\Shading
+     * @var \tyttam\PhpWord\Style\Shading
      */
     private $shading;
 
@@ -345,7 +345,7 @@ class Paragraph extends Border
     /**
      * Get shading
      *
-     * @return \PhpOffice\PhpWord\Style\Indentation
+     * @return \tyttam\PhpWord\Style\Indentation
      */
     public function getIndentation()
     {
@@ -410,7 +410,7 @@ class Paragraph extends Border
     /**
      * Get spacing
      *
-     * @return \PhpOffice\PhpWord\Style\Spacing
+     * @return \tyttam\PhpWord\Style\Spacing
      * @todo Rename to getSpacing in 1.0
      */
     public function getSpace()
@@ -509,7 +509,7 @@ class Paragraph extends Border
      * Set the spacing line rule
      *
      * @param string $value Possible values are defined in LineSpacingRule
-     * @return \PhpOffice\PhpWord\Style\Paragraph
+     * @return \tyttam\PhpWord\Style\Paragraph
      */
     public function setSpacingLineRule($value)
     {
@@ -531,7 +531,7 @@ class Paragraph extends Border
      *
      * @param int|float|string $lineHeight
      *
-     * @throws \PhpOffice\PhpWord\Exception\InvalidStyleException
+     * @throws \tyttam\PhpWord\Exception\InvalidStyleException
      * @return self
      */
     public function setLineHeight($lineHeight)
@@ -546,7 +546,7 @@ class Paragraph extends Border
 
         $this->lineHeight = $lineHeight;
         $this->setSpacing(($lineHeight - 1) * self::LINE_HEIGHT);
-        $this->setSpacingLineRule(\PhpOffice\PhpWord\SimpleType\LineSpacingRule::AUTO);
+        $this->setSpacingLineRule(\tyttam\PhpWord\SimpleType\LineSpacingRule::AUTO);
 
         return $this;
     }
@@ -692,7 +692,7 @@ class Paragraph extends Border
     /**
      * Get tabs
      *
-     * @return \PhpOffice\PhpWord\Style\Tab[]
+     * @return \tyttam\PhpWord\Style\Tab[]
      */
     public function getTabs()
     {
@@ -765,7 +765,7 @@ class Paragraph extends Border
     /**
      * Get shading
      *
-     * @return \PhpOffice\PhpWord\Style\Shading
+     * @return \tyttam\PhpWord\Style\Shading
      */
     public function getShading()
     {

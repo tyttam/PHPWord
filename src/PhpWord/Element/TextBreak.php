@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
+use tyttam\PhpWord\Style\Font;
+use tyttam\PhpWord\Style\Paragraph;
 
 /**
  * Text break element
@@ -28,14 +28,14 @@ class TextBreak extends AbstractElement
     /**
      * Paragraph style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Paragraph
+     * @var string|\tyttam\PhpWord\Style\Paragraph
      */
     private $paragraphStyle = null;
 
     /**
      * Text style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Font
+     * @var string|\tyttam\PhpWord\Style\Font
      */
     private $fontStyle = null;
 
@@ -60,7 +60,7 @@ class TextBreak extends AbstractElement
      *
      * @param mixed $style
      * @param mixed $paragraphStyle
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @return string|\tyttam\PhpWord\Style\Font
      */
     public function setFontStyle($style = null, $paragraphStyle = null)
     {
@@ -81,7 +81,7 @@ class TextBreak extends AbstractElement
     /**
      * Get Text style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @return string|\tyttam\PhpWord\Style\Font
      */
     public function getFontStyle()
     {
@@ -91,8 +91,8 @@ class TextBreak extends AbstractElement
     /**
      * Set Paragraph style
      *
-     * @param   string|array|\PhpOffice\PhpWord\Style\Paragraph $style
-     * @return  string|\PhpOffice\PhpWord\Style\Paragraph
+     * @param   string|array|\tyttam\PhpWord\Style\Paragraph $style
+     * @return  string|\tyttam\PhpWord\Style\Paragraph
      */
     public function setParagraphStyle($style = null)
     {
@@ -111,7 +111,7 @@ class TextBreak extends AbstractElement
     /**
      * Get Paragraph style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Paragraph
+     * @return string|\tyttam\PhpWord\Style\Paragraph
      */
     public function getParagraphStyle()
     {

@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace tyttam\PhpWord\Writer\ODText\Part;
 
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Writer\Word2007\Part\AbstractPart as Word2007AbstractPart;
+use tyttam\PhpWord\Settings;
+use tyttam\PhpWord\Style;
+use tyttam\PhpWord\Style\Font;
+use tyttam\PhpWord\Writer\Word2007\Part\AbstractPart as Word2007AbstractPart;
 
 /**
  * ODText writer part abstract

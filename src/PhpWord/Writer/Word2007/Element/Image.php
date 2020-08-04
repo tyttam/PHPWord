@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace tyttam\PhpWord\Writer\Word2007\Element;
 
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpWord\Element\Image as ImageElement;
-use PhpOffice\PhpWord\Style\Font as FontStyle;
-use PhpOffice\PhpWord\Style\Frame as FrameStyle;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Font as FontStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Image as ImageStyleWriter;
+use tyttam\PhpWord\Element\Image as ImageElement;
+use tyttam\PhpWord\Style\Font as FontStyle;
+use tyttam\PhpWord\Style\Frame as FrameStyle;
+use tyttam\PhpWord\Writer\Word2007\Style\Font as FontStyleWriter;
+use tyttam\PhpWord\Writer\Word2007\Style\Image as ImageStyleWriter;
 
 /**
  * Image element writer

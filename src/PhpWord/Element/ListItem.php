@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
 use PhpOffice\Common\Text as CommonText;
-use PhpOffice\PhpWord\Style\ListItem as ListItemStyle;
+use tyttam\PhpWord\Style\ListItem as ListItemStyle;
 
 /**
  * List item element
@@ -28,14 +28,14 @@ class ListItem extends AbstractElement
     /**
      * Element style
      *
-     * @var \PhpOffice\PhpWord\Style\ListItem
+     * @var \tyttam\PhpWord\Style\ListItem
      */
     private $style;
 
     /**
      * Text object
      *
-     * @var \PhpOffice\PhpWord\Element\Text
+     * @var \tyttam\PhpWord\Element\Text
      */
     private $textObject;
 
@@ -71,7 +71,7 @@ class ListItem extends AbstractElement
     /**
      * Get style
      *
-     * @return \PhpOffice\PhpWord\Style\ListItem
+     * @return \tyttam\PhpWord\Style\ListItem
      */
     public function getStyle()
     {
@@ -81,7 +81,7 @@ class ListItem extends AbstractElement
     /**
      * Get Text object
      *
-     * @return \PhpOffice\PhpWord\Element\Text
+     * @return \tyttam\PhpWord\Element\Text
      */
     public function getTextObject()
     {

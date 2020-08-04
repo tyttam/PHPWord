@@ -1,5 +1,5 @@
 {
-    "name": "tyttam/phpoffice/phpword",
+    "name": "tyttam/phpword",
     "description": "PHPWord с небольшим расширением",
     "keywords": [
         "PHP", "PHPOffice", "office", "PHPWord", "word", "template", "template processor", "reader", "writer",

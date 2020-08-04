@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace tyttam\PhpWord\Writer;
 
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
+use tyttam\PhpWord\Exception\Exception;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\Settings;
 
 /**
  * PDF Writer
@@ -31,16 +31,16 @@ class PDF
     /**
      * The wrapper for the requested PDF rendering engine
      *
-     * @var \PhpOffice\PhpWord\Writer\PDF\AbstractRenderer
+     * @var \tyttam\PhpWord\Writer\PDF\AbstractRenderer
      */
     private $renderer = null;
 
     /**
      * Instantiate a new renderer of the configured type within this container class
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \tyttam\PhpWord\PhpWord $phpWord
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \tyttam\PhpWord\Exception\Exception
      */
     public function __construct(PhpWord $phpWord)
     {

@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace tyttam\PhpWord\Writer\HTML\Element;
 
-use PhpOffice\PhpWord\Element\Image as ImageElement;
-use PhpOffice\PhpWord\Writer\HTML\Style\Image as ImageStyleWriter;
+use tyttam\PhpWord\Element\Image as ImageElement;
+use tyttam\PhpWord\Writer\HTML\Style\Image as ImageStyleWriter;
 
 /**
  * Image element HTML writer

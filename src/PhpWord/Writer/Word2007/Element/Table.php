@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace tyttam\PhpWord\Writer\Word2007\Element;
 
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpWord\Element\Cell as CellElement;
-use PhpOffice\PhpWord\Element\Row as RowElement;
-use PhpOffice\PhpWord\Element\Table as TableElement;
-use PhpOffice\PhpWord\Style\Cell as CellStyle;
-use PhpOffice\PhpWord\Style\Row as RowStyle;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Cell as CellStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Row as RowStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Table as TableStyleWriter;
+use tyttam\PhpWord\Element\Cell as CellElement;
+use tyttam\PhpWord\Element\Row as RowElement;
+use tyttam\PhpWord\Element\Table as TableElement;
+use tyttam\PhpWord\Style\Cell as CellStyle;
+use tyttam\PhpWord\Style\Row as RowStyle;
+use tyttam\PhpWord\Writer\Word2007\Style\Cell as CellStyleWriter;
+use tyttam\PhpWord\Writer\Word2007\Style\Row as RowStyleWriter;
+use tyttam\PhpWord\Writer\Word2007\Style\Table as TableStyleWriter;
 
 /**
  * Table element writer
@@ -72,7 +72,7 @@ class Table extends AbstractElement
      * Write column.
      *
      * @param \PhpOffice\Common\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Table $element
+     * @param \tyttam\PhpWord\Element\Table $element
      */
     private function writeColumns(XMLWriter $xmlWriter, TableElement $element)
     {
@@ -94,7 +94,7 @@ class Table extends AbstractElement
      * Write row.
      *
      * @param \PhpOffice\Common\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Row $row
+     * @param \tyttam\PhpWord\Element\Row $row
      */
     private function writeRow(XMLWriter $xmlWriter, RowElement $row)
     {
@@ -120,7 +120,7 @@ class Table extends AbstractElement
      * Write cell.
      *
      * @param \PhpOffice\Common\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Cell $cell
+     * @param \tyttam\PhpWord\Element\Cell $cell
      */
     private function writeCell(XMLWriter $xmlWriter, CellElement $cell)
     {

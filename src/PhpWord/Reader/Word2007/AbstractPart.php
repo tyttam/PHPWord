@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader\Word2007;
+namespace tyttam\PhpWord\Reader\Word2007;
 
 use PhpOffice\Common\XMLReader;
-use PhpOffice\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
-use PhpOffice\PhpWord\Element\AbstractContainer;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
+use tyttam\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
+use tyttam\PhpWord\Element\AbstractContainer;
+use tyttam\PhpWord\Element\TextRun;
+use tyttam\PhpWord\Element\TrackChange;
+use tyttam\PhpWord\PhpWord;
 
 /**
  * Abstract part reader
@@ -97,7 +97,7 @@ abstract class AbstractPart
      *
      * @param \PhpOffice\Common\XMLReader $xmlReader
      * @param \DOMElement $domNode
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer $parent
+     * @param \tyttam\PhpWord\Element\AbstractContainer $parent
      * @param string $docPart
      *
      * @todo Get font style for preserve text
@@ -204,7 +204,7 @@ abstract class AbstractPart
      *
      * @param \PhpOffice\Common\XMLReader $xmlReader
      * @param \DOMElement $domNode
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer $parent
+     * @param \tyttam\PhpWord\Element\AbstractContainer $parent
      * @param string $docPart
      * @param mixed $paragraphStyle
      *
@@ -333,7 +333,7 @@ abstract class AbstractPart
             $tblStyle = $this->readTableStyle($xmlReader, $domNode);
         }
 
-        /** @var \PhpOffice\PhpWord\Element\Table $table Type hint */
+        /** @var \tyttam\PhpWord\Element\Table $table Type hint */
         $table = $parent->addTable($tblStyle);
         $tblNodes = $xmlReader->getElements('*', $domNode);
         foreach ($tblNodes as $tblNode) {
