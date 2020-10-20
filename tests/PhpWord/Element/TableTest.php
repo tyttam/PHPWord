@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Table
+ * Test class for tyttam\PhpWord\Element\Table
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\Table
+ * @coversDefaultClass \tyttam\PhpWord\Element\Table
  * @runTestsInSeparateProcesses
  */
 class TableTest extends \PHPUnit\Framework\TestCase
@@ -32,7 +32,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
     {
         $oTable = new Table();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Table', $oTable);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Element\\Table', $oTable);
         $this->assertNull($oTable->getStyle());
         $this->assertNull($oTable->getWidth());
         $this->assertEquals(array(), $oTable->getRows());
@@ -56,7 +56,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
     {
         $oTable = new Table(array('borderSize' => 6, 'borderColor' => '006699', 'cellMargin' => 80));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Table', $oTable->getStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Table', $oTable->getStyle());
     }
 
     /**
@@ -77,7 +77,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
     {
         $oTable = new Table();
         $element = $oTable->addRow();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Row', $element);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Element\\Row', $element);
         $this->assertCount(1, $oTable->getRows());
     }
 
@@ -89,7 +89,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $oTable = new Table();
         $oTable->addRow();
         $element = $oTable->addCell();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Cell', $element);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Element\\Cell', $element);
     }
 
     /**

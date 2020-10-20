@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace tyttam\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
  * @coversNothing

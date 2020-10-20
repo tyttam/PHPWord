@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Shading
+ * Test class for tyttam\PhpWord\Style\Shading
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Shading
+ * @coversDefaultClass \tyttam\PhpWord\Style\Shading
  */
 class ShadingTest extends \PHPUnit\Framework\TestCase
 {

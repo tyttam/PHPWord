@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use tyttam\PhpWord\SimpleType\VerticalJc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Cell
+ * Test class for tyttam\PhpWord\Style\Cell
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Cell
+ * @coversDefaultClass \tyttam\PhpWord\Style\Cell
  * @runTestsInSeparateProcesses
  */
 class CellTest extends \PHPUnit\Framework\TestCase

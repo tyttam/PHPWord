@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader;
+namespace tyttam\PhpWord\Reader;
 
-use PhpOffice\PhpWord\IOFactory;
+use tyttam\PhpWord\IOFactory;
 
 /**
- * Test class for PhpOffice\PhpWord\Reader\HTML
+ * Test class for tyttam\PhpWord\Reader\HTML
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Reader\HTML
+ * @coversDefaultClass \tyttam\PhpWord\Reader\HTML
  * @runTestsInSeparateProcesses
  */
 class HTMLTest extends \PHPUnit\Framework\TestCase
@@ -34,7 +34,7 @@ class HTMLTest extends \PHPUnit\Framework\TestCase
     {
         $filename = __DIR__ . '/../_files/documents/reader.html';
         $phpWord = IOFactory::load($filename, 'HTML');
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $phpWord);
+        $this->assertInstanceOf('tyttam\\PhpWord\\PhpWord', $phpWord);
     }
 
     /**

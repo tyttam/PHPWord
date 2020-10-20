@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007;
+namespace tyttam\PhpWord\Writer\Word2007;
 
-use PhpOffice\PhpWord\Writer\Word2007\Part\RelsPart;
+use tyttam\PhpWord\Writer\Word2007\Part\RelsPart;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part subnamespace
+ * Test class for tyttam\PhpWord\Writer\Word2007\Part subnamespace
  *
  * Covers miscellaneous tests
  */
@@ -29,8 +29,8 @@ class PartTest extends \PHPUnit\Framework\TestCase
     /**
      * Test exception when no type or target assigned to a relation
      *
-     * @covers \PhpOffice\PhpWord\Writer\Word2007\Part\Rels::writeRel
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @covers \tyttam\PhpWord\Writer\Word2007\Part\Rels::writeRel
+     * @expectedException \tyttam\PhpWord\Exception\Exception
      * @expectedExceptionMessage Invalid parameters passed.
      */
     public function testRelsWriteRelException()

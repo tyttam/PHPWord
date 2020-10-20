@@ -15,18 +15,18 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace tyttam\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
-use PhpOffice\PhpWord\SimpleType\TblWidth;
-use PhpOffice\PhpWord\Style\Table;
-use PhpOffice\PhpWord\Style\TablePosition;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
+use tyttam\PhpWord\SimpleType\TblWidth;
+use tyttam\PhpWord\Style\Table;
+use tyttam\PhpWord\Style\TablePosition;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Style\Table
+ * Test class for tyttam\PhpWord\Writer\Word2007\Style\Table
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Style\Table
+ * @coversDefaultClass \tyttam\PhpWord\Writer\Word2007\Style\Table
  * @runTestsInSeparateProcesses
  */
 class TableTest extends \PHPUnit\Framework\TestCase
@@ -47,7 +47,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $tableStyle = new Table();
         $tableStyle->setLayout(Table::LAYOUT_FIXED);
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \tyttam\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $table = $section->addTable($tableStyle);
         $table->addRow();
@@ -67,7 +67,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $tableStyle = new Table();
         $tableStyle->setCellSpacing(10.3);
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \tyttam\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $table = $section->addTable($tableStyle);
         $table->addRow();
@@ -100,7 +100,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $tableStyle = new Table();
         $tableStyle->setPosition($tablePosition);
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \tyttam\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $table = $section->addTable($tableStyle);
         $table->addRow();
@@ -129,7 +129,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $tableStyle = new Table();
         $tableStyle->setIndent(new TblWidthComplexType($value, $type));
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \tyttam\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $table = $section->addTable($tableStyle);
         $table->addRow();
@@ -147,7 +147,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $tableStyle = new Table();
         $tableStyle->setBidiVisual(true);
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \tyttam\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $table = $section->addTable($tableStyle);
         $table->addRow();

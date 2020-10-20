@@ -15,18 +15,18 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace tyttam\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\Style\Font;
+use tyttam\PhpWord\Style\Paragraph;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Styles
+ * Test class for tyttam\PhpWord\Writer\Word2007\Part\Styles
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Styles
+ * @coversDefaultClass \tyttam\PhpWord\Writer\Word2007\Part\Styles
  * @runTestsInSeparateProcesses
  */
 class StylesTest extends \PHPUnit\Framework\TestCase

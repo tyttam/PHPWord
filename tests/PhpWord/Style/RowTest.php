@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Row
+ * Test class for tyttam\PhpWord\Style\Row
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Row
+ * @coversDefaultClass \tyttam\PhpWord\Style\Row
  * @runTestsInSeparateProcesses
  */
 class RowTest extends \PHPUnit\Framework\TestCase

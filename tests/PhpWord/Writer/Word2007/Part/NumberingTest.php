@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace tyttam\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\SimpleType\NumberFormat;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Numbering
+ * Test class for tyttam\PhpWord\Writer\Word2007\Part\Numbering
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Numbering
+ * @coversDefaultClass \tyttam\PhpWord\Writer\Word2007\Part\Numbering
  * @runTestsInSeparateProcesses
  * @since 0.10.0
  */

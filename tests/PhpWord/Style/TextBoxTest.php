@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Image
+ * Test class for tyttam\PhpWord\Style\Image
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Image
+ * @coversDefaultClass \tyttam\PhpWord\Style\Image
  * @runTestsInSeparateProcesses
  */
 class TextBoxTest extends \PHPUnit\Framework\TestCase

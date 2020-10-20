@@ -15,12 +15,12 @@
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Chart
+ * Test class for tyttam\PhpWord\Style\Chart
  *
- * @coversDefaultClass          \PhpOffice\PhpWord\Style\Chart
+ * @coversDefaultClass          \tyttam\PhpWord\Style\Chart
  * @runTestsInSeparateProcesses
  */
 class ChartTest extends \PHPUnit\Framework\TestCase

@@ -96,10 +96,10 @@ class Chart extends AbstractStyle
     /**
      * ONLY PIE
      * A string that allows you to determine the position of labels on the graphics
-     * "bestFit" - Best Fit
-     * "ctr"	- Center
-     * "inEnd"	- Inside End
-     * "outEnd"	- Outside End
+     * "bestFit"  - Best Fit
+     * "ctr"	    - Center
+     * "inEnd"	  - Inside End
+     * "outEnd"	  - Outside End
      *
      * @var string
      */
@@ -171,6 +171,34 @@ class Chart extends AbstractStyle
      * @var bool
      */
     private $gridX = false;
+
+    /**
+     * Show X-axis
+     *
+     * @var bool
+     */
+    private $showAxisX = true;
+
+    /**
+     * Show Y-axis
+     *
+     * @var bool
+     */
+    private $showAxisY = true;
+
+    /**
+     * Spacing between columns
+     *
+     * @var int
+     */
+    private $spacingOverlapColumns = 100;
+
+    /**
+     * Display lines on axes
+     *
+     * @var bool
+     */
+    private $displayAxisLines = true;
 
     /**
      * Create a new instance
@@ -265,6 +293,7 @@ class Chart extends AbstractStyle
      * Set the colors to use in a chart.
      *
      * @param array $value a list of colors to use in the chart
+     * @return Chart
      */
     public function setColors($value = array())
     {
@@ -287,6 +316,7 @@ class Chart extends AbstractStyle
      * Set the chart title
      *
      * @param string $value
+     * @return Chart
      */
     public function setTitle($value = null)
     {
@@ -309,6 +339,7 @@ class Chart extends AbstractStyle
      * Set chart legend visibility
      *
      * @param bool $value
+     * @return Chart
      */
     public function setShowLegend($value = false)
     {
@@ -329,7 +360,7 @@ class Chart extends AbstractStyle
         return $this;
     }
 
-    /*
+    /**
      * Show labels for axis
      *
      * @return bool
@@ -377,7 +408,7 @@ class Chart extends AbstractStyle
         }
     }
 
-    /*
+    /**
      * Show Gridlines for Y-Axis
      *
      * @return bool
@@ -438,16 +469,16 @@ class Chart extends AbstractStyle
         return $this->valueLabelPosition;
     }
 
-  /**
-   * Set the valueLabelPosition setting
-   * "none" - skips writing labels
-   * "nextTo" - sets labels next to the value
-   * "low" - sets labels are below the graph
-   * "high" - sets labels above the graph
-   *
-   * @param mixed $labelPosition
-   * @return Chart
-   */
+    /**
+     * Set the valueLabelPosition setting
+     * "none"   - skips writing labels
+     * "nextTo" - sets labels next to the value
+     * "low"    - sets labels are below the graph
+     * "high"   - sets labels above the graph
+     *
+     * @param mixed $labelPosition
+     * @return Chart
+     */
     public function setValueLabelPosition($labelPosition)
     {
         $enum = array('nextTo', 'low', 'high');
@@ -456,58 +487,58 @@ class Chart extends AbstractStyle
         return $this;
     }
 
-  /**
-   * ONLY PIE
-   * Get the data label position
-   *
-   * @return string
-   */
-  public function getDataLabelPosition()
-  {
-    return $this->dataLabelPosition;
-  }
+    /**
+     * ONLY PIE
+     * Get the data label position
+     *
+     * @return string
+     */
+    public function getDataLabelPosition()
+    {
+        return $this->dataLabelPosition;
+    }
 
-  /**
-   * ONLY PIE
-   * Set the data label position
-   * "bestFit" - Best Fit
-   * "ctr"	- Center
-   * "inEnd"	- Inside End
-   * "outEnd"	- Outside End
-   *
-   * @param mixed $datLabelPosition
-   * @return self
-   */
-  public function setDataLabelPosition($datLabelPosition)
-  {
-    $enum = array('bestFit', 'ctr', 'inEnd', 'outEnd');
-    $this->dataLabelPosition = $this->setEnumVal($datLabelPosition, $enum, $this->dataLabelPosition);
+    /**
+     * ONLY PIE
+     * Set the data label position
+     * "bestFit"  - Best Fit
+     * "ctr"	    - Center
+     * "inEnd"	  - Inside End
+     * "outEnd"	  - Outside End
+     *
+     * @param mixed $datLabelPosition
+     * @return Chart
+     */
+    public function setDataLabelPosition($datLabelPosition)
+    {
+        $enum = array('bestFit', 'ctr', 'inEnd', 'outEnd');
+        $this->dataLabelPosition = $this->setEnumVal($datLabelPosition, $enum, $this->dataLabelPosition);
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * ONLY PIE
-   *
-   * @return bool
-   */
-  public function showSeparatorsInLabel()
-  {
-    return $this->showSeparatorsInLabel;
-  }
+    /**
+     * ONLY PIE
+     *
+     * @return bool
+     */
+    public function showSeparatorsInLabel()
+    {
+        return $this->showSeparatorsInLabel;
+    }
 
-  /**
-   * ONLY PIE
-   *
-   * @param $show
-   * @return Chart
-   */
-  public function setShowSeparatorsInLabel($show)
-  {
-    $this->showSeparatorsInLabel = (bool) $show;
+    /**
+     * ONLY PIE
+     *
+     * @param $show
+     * @return Chart
+     */
+    public function setShowSeparatorsInLabel($show)
+    {
+        $this->showSeparatorsInLabel = (bool) $show;
 
-    return $this;
-  }
+        return $this;
+    }
 
     /**
      * Get the categoryAxisTitle
@@ -520,7 +551,9 @@ class Chart extends AbstractStyle
 
     /**
      * Set the title that appears on the category side of the chart
+     *
      * @param string $axisTitle
+     * @return Chart
      */
     public function setCategoryAxisTitle($axisTitle)
     {
@@ -540,7 +573,9 @@ class Chart extends AbstractStyle
 
     /**
      * Set the title that appears on the value side of the chart
+     *
      * @param string $axisTitle
+     * @return Chart
      */
     public function setValueAxisTitle($axisTitle)
     {
@@ -583,6 +618,67 @@ class Chart extends AbstractStyle
     public function setShowGridX($value = true)
     {
         $this->gridX = $this->setBoolVal($value, $this->gridX);
+
+        return $this;
+    }
+
+    public function showAxisX()
+    {
+        return $this->showAxisX;
+    }
+
+    /**
+     * Responsible for showing the axis x
+     *
+     * @param bool $show
+     * @return Chart
+     */
+    public function setShowAxisX($show = true)
+    {
+        $this->showAxisX = $this->setBoolVal($show, $this->showAxisX);
+
+        return $this;
+    }
+
+    public function showAxisY()
+    {
+        return $this->showAxisY;
+    }
+
+
+    /**
+     * Responsible for showing the axis y
+     *
+     * @param bool $show
+     * @return Chart
+     */
+    public function setShowAxisY($show = true)
+    {
+        $this->showAxisY = $this->setBoolVal($show, $this->showAxisY);
+
+        return $this;
+    }
+
+    public function getSpacingOverlapColumns()
+    {
+        return $this->spacingOverlapColumns;
+    }
+
+    public function setSpacingOverlapColumns($spacingOverlapColumns = 100)
+    {
+        $this->spacingOverlapColumns = $this->setIntVal($spacingOverlapColumns, $this->spacingOverlapColumns);
+
+        return $this;
+    }
+
+    public function getDisplayAxisLines()
+    {
+        return $this->displayAxisLines;
+    }
+
+    function setDisplayAxisLines($display = true)
+    {
+        $this->displayAxisLines = $this->setBoolVal($display, $this->displayAxisLines);
 
         return $this;
     }

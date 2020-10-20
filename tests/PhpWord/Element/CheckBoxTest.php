@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\Style\Font;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\Style\Font;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\CheckBox
+ * Test class for tyttam\PhpWord\Element\CheckBox
  *
  * @runTestsInSeparateProcesses
  */
@@ -34,10 +34,10 @@ class CheckBoxTest extends \PHPUnit\Framework\TestCase
     {
         $oCheckBox = new CheckBox();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\CheckBox', $oCheckBox);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Element\\CheckBox', $oCheckBox);
         $this->assertNull($oCheckBox->getText());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $oCheckBox->getFontStyle());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oCheckBox->getParagraphStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Font', $oCheckBox->getFontStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Paragraph', $oCheckBox->getParagraphStyle());
     }
 
     /**
@@ -60,7 +60,7 @@ class CheckBoxTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('fontStyle', $oCheckBox->getFontStyle());
 
         $oCheckBox->setFontStyle(array('bold' => true, 'italic' => true, 'size' => 16));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $oCheckBox->getFontStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Font', $oCheckBox->getFontStyle());
     }
 
     /**
@@ -82,6 +82,6 @@ class CheckBoxTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('paragraphStyle', $oCheckBox->getParagraphStyle());
 
         $oCheckBox->setParagraphStyle(array('alignment' => Jc::CENTER, 'spaceAfter' => 100));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oCheckBox->getParagraphStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Paragraph', $oCheckBox->getParagraphStyle());
     }
 }

@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader;
+namespace tyttam\PhpWord\Reader;
 
-use PhpOffice\PhpWord\IOFactory;
+use tyttam\PhpWord\IOFactory;
 
 /**
- * Test class for PhpOffice\PhpWord\Reader\MsDoc
+ * Test class for tyttam\PhpWord\Reader\MsDoc
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Reader\MsDoc
+ * @coversDefaultClass \tyttam\PhpWord\Reader\MsDoc
  * @runTestsInSeparateProcesses
  */
 class MsDocTest extends \PHPUnit\Framework\TestCase
@@ -54,7 +54,7 @@ class MsDocTest extends \PHPUnit\Framework\TestCase
     {
         $filename = __DIR__ . '/../_files/documents/reader.doc';
         $phpWord = IOFactory::load($filename, 'MsDoc');
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $phpWord);
+        $this->assertInstanceOf('tyttam\\PhpWord\\PhpWord', $phpWord);
     }
 
     /**

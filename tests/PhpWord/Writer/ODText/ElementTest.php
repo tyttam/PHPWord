@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText;
+namespace tyttam\PhpWord\Writer\ODText;
 
-use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\Common\XMLWriter;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Element subnamespace
+ * Test class for tyttam\PhpWord\Writer\ODText\Element subnamespace
  */
 class ElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -33,9 +33,9 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     {
         $elements = array('Image', 'Link', 'Table', 'Text', 'Title');
         foreach ($elements as $element) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\ODText\\Element\\' . $element;
+            $objectClass = 'tyttam\\PhpWord\\Writer\\ODText\\Element\\' . $element;
             $xmlWriter = new XMLWriter();
-            $newElement = new \PhpOffice\PhpWord\Element\PageBreak();
+            $newElement = new \tyttam\PhpWord\Element\PageBreak();
             $object = new $objectClass($xmlWriter, $newElement);
             $object->write();
 

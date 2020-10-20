@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 use PHPUnit\Framework\Assert;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Language
+ * Test class for tyttam\PhpWord\Style\Language
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Language
+ * @coversDefaultClass \tyttam\PhpWord\Style\Language
  */
 class LanguageTest extends \PHPUnit\Framework\TestCase
 {

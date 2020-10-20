@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
-use PhpOffice\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
-use PhpOffice\PhpWord\SimpleType\JcTable;
-use PhpOffice\PhpWord\SimpleType\TblWidth;
+use tyttam\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
+use tyttam\PhpWord\SimpleType\JcTable;
+use tyttam\PhpWord\SimpleType\TblWidth;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Table
+ * Test class for tyttam\PhpWord\Style\Table
  *
  * @runTestsInSeparateProcesses
  */
@@ -44,7 +44,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('FF0000', $object->getBgColor());
 
         $firstRow = $object->getFirstRow();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Table', $firstRow);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Table', $firstRow);
         $this->assertEquals(3, $firstRow->getBorderBottomSize());
     }
 

@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace tyttam\PhpWord\Exception;
 
 /**
- * Test class for PhpOffice\PhpWord\Exception\UnsupportedImageTypeExceptionTest
+ * Test class for tyttam\PhpWord\Exception\UnsupportedImageTypeExceptionTest
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\UnsupportedImageTypeExceptionTest
+ * @coversDefaultClass \tyttam\PhpWord\Exception\UnsupportedImageTypeExceptionTest
  * @runTestsInSeparateProcesses
  */
 class UnsupportedImageTypeExceptionTest extends \PHPUnit\Framework\TestCase
@@ -28,8 +28,8 @@ class UnsupportedImageTypeExceptionTest extends \PHPUnit\Framework\TestCase
     /**
      * Throw new exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
-     * @covers            \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
+     * @expectedException \tyttam\PhpWord\Exception\UnsupportedImageTypeException
+     * @covers            \tyttam\PhpWord\Exception\UnsupportedImageTypeException
      */
     public function testThrowException()
     {

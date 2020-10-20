@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Line
+ * Test class for tyttam\PhpWord\Element\Line
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\Line
+ * @coversDefaultClass \tyttam\PhpWord\Element\Line
  * @runTestsInSeparateProcesses
  */
 class LineTest extends \PHPUnit\Framework\TestCase
@@ -32,7 +32,7 @@ class LineTest extends \PHPUnit\Framework\TestCase
     {
         $oLine = new Line();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Line', $oLine);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Element\\Line', $oLine);
         $this->assertNull($oLine->getStyle());
     }
 
@@ -53,22 +53,22 @@ class LineTest extends \PHPUnit\Framework\TestCase
     {
         $oLine = new Line(
             array(
-                'width'            => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(14),
-                'height'           => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(4),
+                'width'            => \tyttam\PhpWord\Shared\Converter::cmToPixel(14),
+                'height'           => \tyttam\PhpWord\Shared\Converter::cmToPixel(4),
                 'positioning'      => 'absolute',
                 'posHorizontalRel' => 'page',
                 'posVerticalRel'   => 'page',
                 'flip'             => true,
-                'marginLeft'       => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(5),
-                'marginTop'        => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(3),
-                'wrappingStyle'    => \PhpOffice\PhpWord\Style\Image::WRAPPING_STYLE_SQUARE,
-                'beginArrow'       => \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_BLOCK,
-                'endArrow'         => \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_OVAL,
-                'dash'             => \PhpOffice\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT,
+                'marginLeft'       => \tyttam\PhpWord\Shared\Converter::cmToPixel(5),
+                'marginTop'        => \tyttam\PhpWord\Shared\Converter::cmToPixel(3),
+                'wrappingStyle'    => \tyttam\PhpWord\Style\Image::WRAPPING_STYLE_SQUARE,
+                'beginArrow'       => \tyttam\PhpWord\Style\Line::ARROW_STYLE_BLOCK,
+                'endArrow'         => \tyttam\PhpWord\Style\Line::ARROW_STYLE_OVAL,
+                'dash'             => \tyttam\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT,
                 'weight'           => 10,
             )
         );
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Line', $oLine->getStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Line', $oLine->getStyle());
     }
 }

@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Metadata;
+namespace tyttam\PhpWord\Metadata;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\SimpleType\Zoom;
+use tyttam\PhpWord\ComplexType\ProofState;
+use tyttam\PhpWord\SimpleType\Zoom;
 
 /**
- * Test class for PhpOffice\PhpWord\Metadata\Settings
+ * Test class for tyttam\PhpWord\Metadata\Settings
  *
  * @runTestsInSeparateProcesses
  */

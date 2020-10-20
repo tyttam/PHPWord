@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Escaper;
+namespace tyttam\PhpWord\Escaper;
 
 /**
- * Test class for PhpOffice\PhpWord\Escaper\RTF
+ * Test class for tyttam\PhpWord\Escaper\RTF
  */
 class RtfEscaper2Test extends \PHPUnit\Framework\TestCase
 {
@@ -27,10 +27,10 @@ class RtfEscaper2Test extends \PHPUnit\Framework\TestCase
 
     public function escapestring($str)
     {
-        \PhpOffice\PhpWord\Settings::setOutputEscapingEnabled(true);
-        $parentWriter = new \PhpOffice\PhpWord\Writer\RTF();
-        $element = new \PhpOffice\PhpWord\Element\Text($str);
-        $txt = new \PhpOffice\PhpWord\Writer\RTF\Element\Text($parentWriter, $element);
+        \tyttam\PhpWord\Settings::setOutputEscapingEnabled(true);
+        $parentWriter = new \tyttam\PhpWord\Writer\RTF();
+        $element = new \tyttam\PhpWord\Element\Text($str);
+        $txt = new \tyttam\PhpWord\Writer\RTF\Element\Text($parentWriter, $element);
         $txt2 = trim($txt->write());
 
         return $txt2;

@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace tyttam\PhpWord\Shared;
 
-use PhpOffice\PhpWord\Settings;
+use tyttam\PhpWord\Settings;
 
 /**
- * Test class for PhpOffice\PhpWord\Shared\ZipArchive
+ * Test class for tyttam\PhpWord\Shared\ZipArchive
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\ZipArchive
+ * @coversDefaultClass \tyttam\PhpWord\Shared\ZipArchive
  * @runTestsInSeparateProcesses
  */
 class ZipArchiveTest extends \PHPUnit\Framework\TestCase
@@ -30,7 +30,7 @@ class ZipArchiveTest extends \PHPUnit\Framework\TestCase
 //     /**
 //      * Test close method exception: Working in local, not working in Travis
 //      *
-//      * expectedException \PhpOffice\PhpWord\Exception\Exception
+//      * expectedException \tyttam\PhpWord\Exception\Exception
 //      * expectedExceptionMessage Could not close zip file
 //      * covers ::close
 //      */
@@ -109,7 +109,7 @@ class ZipArchiveTest extends \PHPUnit\Framework\TestCase
      */
     public function testPCLZip()
     {
-        $this->testZipArchive('PhpOffice\PhpWord\Shared\ZipArchive');
+        $this->testZipArchive('tyttam\PhpWord\Shared\ZipArchive');
     }
 
     /**

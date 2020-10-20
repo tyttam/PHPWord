@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace tyttam\PhpWord;
 
-use PhpOffice\PhpWord\Element\Image;
+use tyttam\PhpWord\Element\Image;
 
 /**
- * Test class for PhpOffice\PhpWord\Media
+ * Test class for tyttam\PhpWord\Media
  *
  * @runTestsInSeparateProcesses
  */

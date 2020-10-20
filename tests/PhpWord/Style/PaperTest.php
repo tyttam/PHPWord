@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Paper
+ * Test class for tyttam\PhpWord\Style\Paper
  *
  * @runTestsInSeparateProcesses
  */

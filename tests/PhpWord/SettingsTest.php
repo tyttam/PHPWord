@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace tyttam\PhpWord;
 
 /**
- * Test class for PhpOffice\PhpWord\Settings
+ * Test class for tyttam\PhpWord\Settings
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Settings
+ * @coversDefaultClass \tyttam\PhpWord\Settings
  * @runTestsInSeparateProcesses
  */
 class SettingsTest extends \PHPUnit\Framework\TestCase

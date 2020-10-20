@@ -15,16 +15,16 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace tyttam\PhpWord\Writer\ODText\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Part\Content
+ * Test class for tyttam\PhpWord\Writer\ODText\Part\Content
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\ODText\Part\Content
+ * @coversDefaultClass \tyttam\PhpWord\Writer\ODText\Part\Content
  * @runTestsInSeparateProcesses
  */
 class ContentTest extends \PHPUnit\Framework\TestCase

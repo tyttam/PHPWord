@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\ListItem
+ * Test class for tyttam\PhpWord\Style\ListItem
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\ListItem
+ * @coversDefaultClass \tyttam\PhpWord\Style\ListItem
  * @runTestsInSeparateProcesses
  */
 class ListItemTest extends \PHPUnit\Framework\TestCase

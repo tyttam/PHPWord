@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace tyttam\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\Style\Image;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\Style\Image;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Style\Font
+ * Test class for tyttam\PhpWord\Writer\Word2007\Style\Font
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Style\Frame
+ * @coversDefaultClass \tyttam\PhpWord\Writer\Word2007\Style\Frame
  * @runTestsInSeparateProcesses
  */
 class ImageTest extends \PHPUnit\Framework\TestCase
@@ -49,7 +49,7 @@ class ImageTest extends \PHPUnit\Framework\TestCase
             'wrapDistanceBottom' => 40,
         );
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \tyttam\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addImage(__DIR__ . '/../../../_files/images/earth.jpg', $styles);
         $doc = TestHelperDOCX::getDocument($phpWord, 'Word2007');

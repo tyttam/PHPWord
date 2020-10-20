@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace tyttam\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\Writer\Word2007;
+use tyttam\PhpWord\Writer\Word2007;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Header
+ * Test class for tyttam\PhpWord\Writer\Word2007\Part\Header
  *
  * @runTestsInSeparateProcesses
  */
@@ -33,7 +33,7 @@ class HeaderTest extends \PHPUnit\Framework\TestCase
     {
         $imageSrc = __DIR__ . '/../../../_files/images/PhpWord.png';
 
-        $container = new \PhpOffice\PhpWord\Element\Header(1);
+        $container = new \tyttam\PhpWord\Element\Header(1);
         $container->addText('Test');
         $container->addPreserveText('');
         $container->addTextBreak();

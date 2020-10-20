@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace tyttam\PhpWord\Writer;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\PhpWord\AbstractWebServerEmbeddedTest;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007
+ * Test class for tyttam\PhpWord\Writer\Word2007
  *
  * @runTestsInSeparateProcesses
  */
@@ -60,11 +60,11 @@ class Word2007Test extends AbstractWebServerEmbeddedTest
         );
         foreach ($writerParts as $part => $type) {
             $this->assertInstanceOf(
-                "PhpOffice\\PhpWord\\Writer\\Word2007\\Part\\{$type}",
+                "tyttam\\PhpWord\\Writer\\Word2007\\Part\\{$type}",
                 $object->getWriterPart($part)
             );
             $this->assertInstanceOf(
-                'PhpOffice\\PhpWord\\Writer\\Word2007',
+                'tyttam\\PhpWord\\Writer\\Word2007',
                 $object->getWriterPart($part)->getParentWriter()
             );
         }
@@ -183,7 +183,7 @@ class Word2007Test extends AbstractWebServerEmbeddedTest
     /**
      * Use disk caching exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \tyttam\PhpWord\Exception\Exception
      */
     public function testSetUseDiskCachingException()
     {

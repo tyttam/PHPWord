@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\LineNumbering
+ * Test class for tyttam\PhpWord\Style\LineNumbering
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\LineNumbering
+ * @coversDefaultClass \tyttam\PhpWord\Style\LineNumbering
  */
 class LineNumberingTest extends \PHPUnit\Framework\TestCase
 {

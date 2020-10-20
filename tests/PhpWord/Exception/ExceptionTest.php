@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace tyttam\PhpWord\Exception;
 
 /**
- * Test class for PhpOffice\PhpWord\Exception\Exception
+ * Test class for tyttam\PhpWord\Exception\Exception
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\Exception
+ * @coversDefaultClass \tyttam\PhpWord\Exception\Exception
  * @runTestsInSeparateProcesses
  */
 class ExceptionTest extends \PHPUnit\Framework\TestCase
@@ -28,8 +28,8 @@ class ExceptionTest extends \PHPUnit\Framework\TestCase
     /**
      * Throw new exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
-     * @covers            \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \tyttam\PhpWord\Exception\Exception
+     * @covers            \tyttam\PhpWord\Exception\Exception
      */
     public function testThrowException()
     {

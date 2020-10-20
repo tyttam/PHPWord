@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
-use PhpOffice\PhpWord\PhpWord;
+use tyttam\PhpWord\PhpWord;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TOC
+ * Test class for tyttam\PhpWord\Element\TOC
  *
  * @runTestsInSeparateProcesses
  */
@@ -33,14 +33,14 @@ class TOCTest extends \PHPUnit\Framework\TestCase
     {
         $expected = array(
             'position' => 9062,
-            'leader'   => \PhpOffice\PhpWord\Style\Tab::TAB_LEADER_DOT,
+            'leader'   => \tyttam\PhpWord\Style\Tab::TAB_LEADER_DOT,
             'indent'   => 200,
         );
         $object = new TOC(array('size' => 11), array('position' => $expected['position']));
         $tocStyle = $object->getStyleTOC();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\TOC', $tocStyle);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $object->getStyleFont());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\TOC', $tocStyle);
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Font', $object->getStyleFont());
 
         foreach ($expected as $key => $value) {
             $method = "get{$key}";

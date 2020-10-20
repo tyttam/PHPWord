@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace tyttam\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\TOC
+ * Test class for tyttam\PhpWord\Style\TOC
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\TOC
+ * @coversDefaultClass \tyttam\PhpWord\Style\TOC
  */
 class TOCTest extends \PHPUnit\Framework\TestCase
 {

@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace tyttam\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
+use tyttam\PhpWord\Style\Font;
+use tyttam\PhpWord\Style\Paragraph;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TextBreak
+ * Test class for tyttam\PhpWord\Element\TextBreak
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\TextBreak
+ * @coversDefaultClass \tyttam\PhpWord\Element\TextBreak
  * @runTestsInSeparateProcesses
  */
 class TextBreakTest extends \PHPUnit\Framework\TestCase
@@ -58,8 +58,8 @@ class TextBreakTest extends \PHPUnit\Framework\TestCase
         $fStyle = array('size' => 12);
         $pStyle = array('spacing' => 240);
         $object = new TextBreak($fStyle, $pStyle);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $object->getFontStyle());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $object->getParagraphStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Font', $object->getFontStyle());
+        $this->assertInstanceOf('tyttam\\PhpWord\\Style\\Paragraph', $object->getParagraphStyle());
     }
 
     /**

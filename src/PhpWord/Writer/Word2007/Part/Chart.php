@@ -190,7 +190,7 @@ class Chart extends AbstractPart
         // Series
         $this->writeSeries($xmlWriter, isset($this->options['scatter']));
 
-        $xmlWriter->writeElementBlock('c:overlap', 'val', '100');
+        $xmlWriter->writeElementBlock('c:overlap', 'val', $style->getSpacingOverlapColumns());
 
         // Axes
         if (isset($this->options['axes'])) {
@@ -256,10 +256,10 @@ class Chart extends AbstractPart
             }
 
             if ($this->element->getType() == 'pie') {
-              $xmlWriter->writeElementBlock("c:dLblPos", 'val', $style->getDataLabelPosition());
-              if (!$style->showSeparatorsInLabel()) {
-                $xmlWriter->writeElementBlock("c:separator", 'val', ' ');
-              }
+                $xmlWriter->writeElementBlock("c:dLblPos", 'val', $style->getDataLabelPosition());
+                if (!$style->showSeparatorsInLabel()) {
+                    $xmlWriter->writeElementBlock("c:separator", 'val', ' ');
+                }
             }
 
             $xmlWriter->endElement(); // c:dLbls
@@ -356,6 +356,7 @@ class Chart extends AbstractPart
             'val' => array('c:valAx', 2, 'l', 1),
         );
         list($axisType, $axisId, $axisPos, $axisCross) = $types[$type];
+        $showAxis = ($type == 'cat' && $style->showAxisX()) || ($type == 'val' && $style->showAxisY());
 
         $xmlWriter->startElement($axisType);
 
@@ -379,7 +380,7 @@ class Chart extends AbstractPart
         $xmlWriter->writeElementBlock('c:auto', 'val', 1);
 
         if (isset($this->options['axes'])) {
-            $xmlWriter->writeElementBlock('c:delete', 'val', 0);
+            $xmlWriter->writeElementBlock('c:delete', 'val', ($showAxis ? 0 : 1));
             $xmlWriter->writeElementBlock('c:majorTickMark', 'val', $style->getMajorTickPosition());
             $xmlWriter->writeElementBlock('c:minorTickMark', 'val', 'none');
             if ($style->showAxisLabels()) {
@@ -401,7 +402,7 @@ class Chart extends AbstractPart
         $xmlWriter->writeElementBlock('c:orientation', 'val', 'minMax');
         $xmlWriter->endElement(); // c:scaling
 
-        $this->writeShape($xmlWriter, true);
+        $this->writeShape($xmlWriter, $style->getDisplayAxisLines());
 
         $xmlWriter->endElement(); // $axisType
     }

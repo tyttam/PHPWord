@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML;
+namespace tyttam\PhpWord\Writer\HTML;
 
-use PhpOffice\PhpWord\Element\Text as TextElement;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Writer\HTML;
-use PhpOffice\PhpWord\Writer\HTML\Element\Text;
+use tyttam\PhpWord\Element\Text as TextElement;
+use tyttam\PhpWord\Element\TextRun;
+use tyttam\PhpWord\Element\TrackChange;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\Writer\HTML;
+use tyttam\PhpWord\Writer\HTML\Element\Text;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\HTML\Element subnamespace
+ * Test class for tyttam\PhpWord\Writer\HTML\Element subnamespace
  */
 class ElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -36,9 +36,9 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     {
         $elements = array('Container', 'Footnote', 'Image', 'Link', 'ListItem', 'ListItemRun', 'Table', 'Title', 'Bookmark');
         foreach ($elements as $element) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\HTML\\Element\\' . $element;
+            $objectClass = 'tyttam\\PhpWord\\Writer\\HTML\\Element\\' . $element;
             $parentWriter = new HTML();
-            $newElement = new \PhpOffice\PhpWord\Element\PageBreak();
+            $newElement = new \tyttam\PhpWord\Element\PageBreak();
             $object = new $objectClass($parentWriter, $newElement);
 
             $this->assertEquals('', $object->write());
@@ -197,11 +197,11 @@ class ElementTest extends \PHPUnit\Framework\TestCase
         $section = $phpWord->addSection();
         $section->addTable();
 
-        $table1 = $section->addTable(array('layout' => \PhpOffice\PhpWord\Style\Table::LAYOUT_FIXED));
+        $table1 = $section->addTable(array('layout' => \tyttam\PhpWord\Style\Table::LAYOUT_FIXED));
         $row1 = $table1->addRow();
         $row1->addCell()->addText('fixed layout table');
 
-        $table2 = $section->addTable(array('layout' => \PhpOffice\PhpWord\Style\Table::LAYOUT_AUTO));
+        $table2 = $section->addTable(array('layout' => \tyttam\PhpWord\Style\Table::LAYOUT_AUTO));
         $row2 = $table2->addRow();
         $row2->addCell()->addText('auto layout table');
 

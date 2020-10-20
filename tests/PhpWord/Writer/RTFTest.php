@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace tyttam\PhpWord\Writer;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\RTF
+ * Test class for tyttam\PhpWord\Writer\RTF
  *
  * @runTestsInSeparateProcesses
  */
@@ -34,13 +34,13 @@ class RTFTest extends \PHPUnit\Framework\TestCase
     {
         $object = new RTF(new PhpWord());
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $object->getPhpWord());
+        $this->assertInstanceOf('tyttam\\PhpWord\\PhpWord', $object->getPhpWord());
     }
 
     /**
      * Construct with null
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \tyttam\PhpWord\Exception\Exception
      * @expectedExceptionMessage No PhpWord assigned.
      */
     public function testConstructWithNull()

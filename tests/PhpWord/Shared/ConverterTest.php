@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace tyttam\PhpWord\Shared;
 
 /**
- * Test class for PhpOffice\PhpWord\Shared\Converter
+ * Test class for tyttam\PhpWord\Shared\Converter
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\Converter
+ * @coversDefaultClass \tyttam\PhpWord\Shared\Converter
  */
 class ConverterTest extends \PHPUnit\Framework\TestCase
 {
@@ -114,7 +114,7 @@ class ConverterTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(array(102, 119, 136), Converter::htmlToRgb('678')); // 3 characters
         $this->assertEquals($flse, Converter::htmlToRgb('0F9D')); // 4 characters
         $this->assertEquals(array(0, 0, 0), Converter::htmlToRgb('unknow')); // 6 characters, invalid
-        $this->assertEquals(array(139, 0, 139), Converter::htmlToRgb(\PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKMAGENTA)); // Constant
+        $this->assertEquals(array(139, 0, 139), Converter::htmlToRgb(\tyttam\PhpWord\Style\Font::FGCOLOR_DARKMAGENTA)); // Constant
     }
 
     /**

@@ -15,20 +15,20 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace tyttam\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\Common\Microsoft\PasswordEncoder;
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\ComplexType\TrackChangesView;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Zoom;
-use PhpOffice\PhpWord\Style\Language;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use tyttam\Common\Microsoft\PasswordEncoder;
+use tyttam\PhpWord\ComplexType\ProofState;
+use tyttam\PhpWord\ComplexType\TrackChangesView;
+use tyttam\PhpWord\PhpWord;
+use tyttam\PhpWord\SimpleType\Zoom;
+use tyttam\PhpWord\Style\Language;
+use tyttam\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Settings
+ * Test class for tyttam\PhpWord\Writer\Word2007\Part\Settings
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Settings
+ * @coversDefaultClass \tyttam\PhpWord\Writer\Word2007\Part\Settings
  */
 class SettingsTest extends \PHPUnit\Framework\TestCase
 {
